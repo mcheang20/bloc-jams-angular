@@ -35,6 +35,17 @@ var albumMarconi = {
         Fixtures.getAlbum = function() {
          return albumPicasso;
      };
+<<<<<<< HEAD:dist/scripts/services/Fixtures.js
+=======
+         
+        Fixtures.getCollection = function(numberOfAlbums) {
+            var albums = [];
+            for(var i = 0; i < numberOfAlbums; i++) {
+                albums.push(angular.copy(albumPicasso));
+            }
+            return albums;
+        };
+>>>>>>> bloc-jams-angular-assignment-6:dist/scripts/services/Fixtures.js
 
          return Fixtures;
      }
