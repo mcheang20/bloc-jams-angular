@@ -3,6 +3,10 @@
           var SongPlayer = {};
          
           var currentSong = null;
+/**
+ * @desc Buzz object audio file
+ * @type {Object}
+ */
           var currentBuzzObject = null;
          
  /**
