@@ -1,3 +1,7 @@
+(function() {
+     function Fixtures() {
+         var Fixtures = {};
+         
 var albumPicasso = {
      title: 'The Colors',
      artist: 'Pablo Picasso',
@@ -27,3 +31,23 @@ var albumMarconi = {
          { title: 'Wrong phone number', duration: '2:15'}
      ]
  };
+         
+        Fixtures.getAlbum = function() {
+         return albumPicasso;
+     };
+         
+        Fixtures.getCollection = function(numberOfAlbums) {
+            var albums = [];
+            for(var i = 0; i < numberOfAlbums; i++) {
+                albums.push(angular.copy(albumPicasso));
+            }
+            return albums;
+        };
+
+         return Fixtures;
+     }
+ 
+     angular
+         .module('blocJams')
+         .factory('Fixtures', Fixtures);
+ })();
