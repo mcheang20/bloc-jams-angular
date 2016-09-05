@@ -23,7 +23,7 @@
             if (currentBuzzObject) {
             currentBuzzObject.stop();
             SongPlayer.currentSong.playing = null;
-        }
+        };
  
         currentBuzzObject = new buzz.sound(song.audioUrl, {
         formats: ['mp3'],
