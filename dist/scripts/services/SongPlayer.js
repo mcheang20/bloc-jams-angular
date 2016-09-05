@@ -33,14 +33,11 @@
         formats: ['mp3'],
         preload: true
     });
- 
-    currentSong = song;
- };
 
  SongPlayer.currentSong = song;
 };
 
-         /**
+/**
  * @function getSongIndex
  * @desc gets index of current song
  */
