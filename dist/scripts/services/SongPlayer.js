@@ -22,12 +22,7 @@
             currentBuzzObject.play();
             SongPlayer.currentSong.playing = true;
         }         
-         
-        var playSong = function(song) {
-            currentBuzzObject.play();
-            currentSong.playing = true;
-         }
-        
+    
         var setSong = function(song) {
             if (currentBuzzObject) {
             currentBuzzObject.stop();
@@ -38,11 +33,9 @@
         formats: ['mp3'],
         preload: true
     });
-<<<<<<< HEAD
  
     currentSong = song;
  };
-=======
 
  SongPlayer.currentSong = song;
 };
@@ -60,7 +53,6 @@
 * @type {Object}
 */
 SongPlayer.currentSong = null;
->>>>>>> bloc-jams-angular-services-pt3
          
  /**
  * @function play
