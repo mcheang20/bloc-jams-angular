@@ -36,14 +36,16 @@
     var getSongIndex = function(song) {
         return currentAlbum.songs.indexOf(song);
     };
+
+ SongPlayer.currentSong = song;
+};
+
 /**
 * @desc Active song object from list of songs
 * @type {Object}
 */
-
- SongPlayer.currentSong = null;
-};
-
+         SongPlayer.currentSong = null;
+         
           var playSong = function(song) {
             currentBuzzObject.play();
             SongPlayer.currentSong.playing = true;
