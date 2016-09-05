@@ -35,20 +35,24 @@
  */
     var getSongIndex = function(song) {
         return currentAlbum.songs.indexOf(song);
-    };            
+    };
 /**
 * @desc Active song object from list of songs
 * @type {Object}
 */
+
  SongPlayer.currentSong = null;
- };
+};
 
           var playSong = function(song) {
             currentBuzzObject.play();
             SongPlayer.currentSong.playing = true;
-        }
-          
-         
+        }         
+ /**
+ * @function play
+ * @desc Play current or new song
+ * @param {Object} song
+ */
         SongPlayer.play = function(song) {
             song = song || SongPlayer.currentSong;
             if (SongPlayer.currentSong !== song) {
@@ -60,7 +64,11 @@
          }
        }       
      };
-         
+/**
+ * @function pause
+ * @desc Pause current song
+ * @param {Object} song
+ */         
       SongPlayer.pause = function(song) {
          song = song || SongPlayer.currentSong;
          currentBuzzObject.pause();
