@@ -1,5 +1,5 @@
  (function() {
-     function SongPlayer($rootScope, Fixtures) {
+     function SongPlayer($rootScope, Fixtures, Metric) {
          var SongPlayer = {};
 /**
  * @function currentAlbum
@@ -26,7 +26,7 @@
          var stopSong = function(song) {
             currentBuzzObject.stop();
             SongPlayer.currentSong.playing = null;
-        }         
+         }
     
          var setSong = function(song) {
              if (currentBuzzObject) {
@@ -164,5 +164,5 @@
  
      angular
          .module('blocJams')
-         .factory('SongPlayer', ['$rootScope', 'Fixtures', SongPlayer]);
+         .factory('SongPlayer', ['$rootScope', 'Fixtures', 'Metric', SongPlayer]);
  })();
