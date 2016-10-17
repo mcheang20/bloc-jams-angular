@@ -8,13 +8,13 @@
   
     return {
       songPlays: [],
-      albumSongData: {},
+      // albumSongData: {},
       // Function that records a metric object by pushing it to the $rootScope array
       registerSongPlay: function(song) {
         // Add time to event register
         song['playedAt'] = newDate;
 
-        var currentDay = date.getDate();
+        var currentDay = date.getTime();
         
           if( this.songPlays.length ){
               this.songPlays.forEach( function( item ){
@@ -25,13 +25,13 @@
               }
                // otherwise..
               else {
-                this.songPlays.push([ date.getDate(), 1 ]);
+                this.songPlays.push([ date.getTime(), 1 ]);
               }
             } );
           }
        
           else {
-              this.songPlays.push([ date.getDate(), 1 ]);
+              this.songPlays.push([ date.getTime(), 1 ]);
           }
       },
         

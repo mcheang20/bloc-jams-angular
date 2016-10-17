@@ -4,7 +4,7 @@
        this.Metric = Metric;
          this.name = "Bloc Jams Metrics";
 //         this.dataArray = [ $rootScope.songPlays ];
-         this.dataArray = [ [17, 3] ];
+         this.dataArray = [ [$rootScope.songPlays] ];
          
        this.options = {
            chart: {
