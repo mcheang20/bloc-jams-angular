@@ -1,6 +1,5 @@
 (function() {
   function Metric($rootScope) {
-    $rootScope.songPlays = [];
     $rootScope.registerAlbum = [];
     
     var date = new Date();
@@ -8,11 +7,32 @@
     var newDate =  formatDate.format('MMM Do YY');
   
     return {
+      songPlays: [],
+      albumSongData: {},
       // Function that records a metric object by pushing it to the $rootScope array
       registerSongPlay: function(song) {
         // Add time to event register
         song['playedAt'] = newDate;
-        $rootScope.songPlays.push(song);
+
+        var currentDay = date.getDate();
+        
+          if( this.songPlays.length ){
+              this.songPlays.forEach( function( item ){
+              console.log(item);
+               // if current date is in this.songPlays - add one to totalPlays of song
+              if( item[0] === currentDay ){
+                  item[1]++;
+              }
+               // otherwise..
+              else {
+                this.songPlays.push([ date.getDate(), 1 ]);
+              }
+            } );
+          }
+       
+          else {
+              this.songPlays.push([ date.getDate(), 1 ]);
+          }
       },
         
        listSongsPlayed: function() {
@@ -24,8 +44,26 @@
       },
         
       registerAlbumView: function(album) {
-        album['title'] = album.title;
-        $rootScope.registerAlbum.push(album);
+        album['viewedAt'] = newDate;
+//        $rootScope.registerAlbum.push(album);
+         album.songs.forEach( function(song){
+          console.log(song);
+          this.albumSongData[song.name] = { newDate: [17, 3] };
+         } );
+        /*
+        {
+            blue: { 
+              "Oct 17 16": [ [17 (the day of the click for chart), 34 (number of clicks)] ],
+              "Oct 18 16": []
+            },
+            green: [],
+            red: [],
+            pink: [],
+            magenta: []
+        
+        
+        }
+        */
       },
         
       listAlbumViews: function() {
@@ -34,7 +72,7 @@
             albums.push(album.title);      
           });
           return albums;
-      }
+      },
     };
   }
 

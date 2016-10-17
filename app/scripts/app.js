@@ -23,10 +23,16 @@
             url: '/collection',
             controller: 'CollectionCtrl as collection',
             templateUrl: '/templates/collection.html'
+        })
+        
+         .state('metric', {
+            url: '/metric',
+            controller: 'MetricCtrl as metric',
+            templateUrl: '/templates/metric.html'
         });
      }
     
     angular
-         .module('blocJams', ['ui.router'])
+         .module('blocJams', ['ui.router', 'nvd3'])
          .config(config);
  })();

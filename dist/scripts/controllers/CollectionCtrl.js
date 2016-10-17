@@ -1,10 +1,11 @@
 (function() {
-     function CollectionCtrl(Fixtures) {
+     function CollectionCtrl(Fixtures, Metric, $rootScope) {
         this.albums = Fixtures.getCollection(12);
+        this.Metric = Metric;
      }
     
  
      angular
          .module('blocJams')
-         .controller('CollectionCtrl', ['Fixtures', CollectionCtrl]);
+         .controller('CollectionCtrl', ['Fixtures', 'Metric', '$rootScope', CollectionCtrl]);
  })();

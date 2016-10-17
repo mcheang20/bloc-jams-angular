@@ -1,7 +1,7 @@
 (function() {
      function AlbumCtrl(Fixtures, SongPlayer, Metric, $rootScope) {
-      console.log(Metric);
       console.log($rootScope.songPlays);
+      console.log($rootScope.registerAlbum);
       this.albumData = Fixtures.getAlbum();
       this.songPlayer = SongPlayer;
       this.Metric = Metric;
