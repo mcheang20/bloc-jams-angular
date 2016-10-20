@@ -1,64 +1,66 @@
 (function() {
-     function MetricCtrl(Metric, $rootScope) {
-         console.log($rootScope.songPlays);
+     function MetricCtrl(Metric, Fixtures, $rootScope) {
+        console.log($rootScope.songPlays);
        this.Metric = Metric;
-         this.name = "Bloc Jams Metrics";
-//         this.dataArray = [ $rootScope.songPlays ];
-         this.dataArray = [ [$rootScope.songPlays] ];
+       this.Fixtures = Fixtures.getAlbum;
+       this.name = "Bloc Jams Metrics";
+       this.dataArray =  this.Metric.albumSongData;
          
        this.options = {
-           chart: {
-                type: 'historicalBarChart',
+            chart: {
+                type: 'discreteBarChart',
                 height: 450,
                 margin : {
                     top: 20,
-                    bottom: 65,
-                    left: 50
+                    right: 20,
+                    bottom: 50,
+                    left: 55
                 },
-                x: function(d){return d[0];},
-                y: function(d){return d[1];},
+                x: function(d){return d.label;},
+                y: function(d){return d.value + (1e-10);},
                 showValues: true,
                 valueFormat: function(d){
-                    return d3.format(',.1f')(d);
+                    return d3.format(',.0f')(d);
                 },
-                duration: 100,
+                duration: 500,
                 xAxis: {
-                    axisLabel: 'Date',
-                    tickFormat: function(d) {
-                        return d3.time.format('%x')(new Date(d))
-                    },
-                    rotateLabels: 30,
-                    showMaxMin: false
+                    axisLabel: 'X Axis'
                 },
                 yAxis: {
-                    axisLabel: 'Song Plays',
-                    axisLabelDistance: -10,
-                    tickFormat: function(d){
-                        return d3.format(',.1f')(d);
-                    }
-                },
-                tooltip: {
-                    keyFormatter: function(d) {
-                        return d3.time.format('%x')(new Date(d));
-                    }
-                },
-                zoom: {
-                    enabled: true,
-                    scaleExtent: [1, 10],
-                    useFixedDomain: false,
-                    useNiceScale: false,
-                    horizontalOff: false,
-                    verticalOff: true,
-                    unzoomEventType: 'dblclick.zoom'
+                    axisLabel: 'Y Axis',
+                    axisLabelDistance: -10
                 }
             }
        };
-           
+         
+
            this.data = [
                {
                 "key" : "Songs Played" ,
-                "bar": true,
-                "values": this.dataArray
+//                "values": [
+//                    {
+//                       label: "Blue",
+//                       value: 5
+//                    },
+//                    {
+//                        label: "Green",
+//                        value: 10
+//                    },
+//                    {
+//                        label: "Red",
+//                        value: 3
+//                    },
+//                    {
+//                        label: "Pink",
+//                        value: 12
+//                    },
+//                    {
+//                        label: "Magenta",
+//                        value: 7
+//                    }
+//                ]
+//                   
+                   values: this.dataArray
                }];
            
      }
@@ -66,5 +68,5 @@
  
      angular
          .module('blocJams')
-         .controller('MetricCtrl', ['$rootScope', 'Metric', MetricCtrl]);
+         .controller('MetricCtrl', ['$rootScope', 'Metric', 'Fixtures', MetricCtrl]);
  })();
