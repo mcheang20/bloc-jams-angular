@@ -8,11 +8,10 @@ Start by cloning the repository:
 
 ```
 $ git clone https://github.com/mcheang20/bloc-jams-angular.git
-
+```
 The project uses Grunt to run tasks in development. Thoroughly review our [resource on using Grunt](https://www.bloc.io/resources/using-grunt) before using this application. It may also help to review [our resource on NPM and `package.json` files](https://www.bloc.io/resources/npm-and-package-json).
 
 Install the project dependencies by running:
-
 ```
 $ npm install
 ```
