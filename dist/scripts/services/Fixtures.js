@@ -1,12 +1,13 @@
 (function() {
      function Fixtures() {
          var Fixtures = {};
-         
+
 var albumPicasso = {
      title: 'The Colors',
      artist: 'Pablo Picasso',
      label: 'Cubism',
      year: '1881',
+     publisher: '1909 Spanish Records',
      albumArtUrl: 'assets/images/album_covers/01.png',
      songs: [
          { title: 'Blue', duration: 161.71, audioUrl: 'assets/music/bloc_jams_music/blue' },
@@ -16,7 +17,21 @@ var albumPicasso = {
          { title: 'Magenta', duration: 374.22, audioUrl: 'assets/music/bloc_jams_music/magenta' }
      ]
  };
- 
+
+ var albumTobu = {
+      title: 'Sugar',
+      artist: 'Tobu',
+      label: 'Electronic',
+      year: '2016',
+      albumArtUrl: 'assets/images/album_covers/tobualbum.png',
+      songs: [
+          { title: 'Candyland', duration: 198, audioUrl: 'assets/music/bloc_jams_music/candyland' },
+          { title: 'Colors', duration: 254, audioUrl: 'assets/music/bloc_jams_music/colors' },
+          { title: 'Hope', duration: 285, audioUrl: 'assets/music/bloc_jams_music/hope' },
+          { title: 'Seven', duration: 233, audioUrl: 'assets/music/bloc_jams_music/seven' }
+      ]
+  };
+
 var albumMarconi = {
      title: 'The Telephone',
      artist: 'Guglielmo Marconi',
@@ -31,22 +46,23 @@ var albumMarconi = {
          { title: 'Wrong phone number', duration: '2:15'}
      ]
  };
-         
+
         Fixtures.getAlbum = function() {
-         return albumPicasso;
-     };
-         
+          return albumTobu;
+        };
+
         Fixtures.getCollection = function(numberOfAlbums) {
             var albums = [];
             for(var i = 0; i < numberOfAlbums; i++) {
                 albums.push(angular.copy(albumPicasso));
+                albums.push(angular.copy(albumTobu));
             }
             return albums;
         };
 
          return Fixtures;
      }
- 
+
      angular
          .module('blocJams')
          .factory('Fixtures', Fixtures);
