@@ -21,14 +21,35 @@
          <div class="links-container">
              <a ui-sref="collection" class="navbar-link">collection</a>
              <a ui-sref="metric" class="navbar-link">metrics</a>
+             <a ui-sref="login" ng-hide="currentUser" class="navbar-link">login</a>
+             <a ui-sref="register" ng-hide="currentUser" class="navbar-link">register</a>
          </div>
          </nav>
+         <div ng-show="currentUser" ng-controller="AuthCtrl">
+           <span>Hello {{ currentUser.firstname}}</span>
+            <a ui-sref="login" ng-click="logout()" class="navbar-link">logout</a>
+         </div>
 
         <ui-view></ui-view>
 
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
+
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCxaSkuCkhPiA1G-l5AfNXQijrcVRRLGec",
+        authDomain: "gorilla-music.firebaseapp.com",
+        databaseURL: "https://gorilla-music.firebaseio.com",
+        storageBucket: "gorilla-music.appspot.com",
+        messagingSenderId: "778430650087"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+    <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.1.10/buzz.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
@@ -38,10 +59,12 @@
     <script src="/scripts/services/Fixtures.js"></script>
     <script src="/scripts/services/SongPlayer.js"></script>
     <script src="/scripts/services/Metric.js"></script>
+    <script src="/scripts/services/Authentication.js"></script>
     <script src="/scripts/controllers/LandingCtrl.js"></script>
     <script src="/scripts/controllers/CollectionCtrl.js"></script>
     <script src="/scripts/controllers/AlbumCtrl.js"></script>
     <script src="/scripts/controllers/PlayerBarCtrl.js"></script>
+    <script src="/scripts/controllers/AuthCtrl.js"></script>
     <script src="/scripts/controllers/MetricCtrl.js"></script>
     <script src="/scripts/directives/seekBar.js"></script>
     <script src="/scripts/filters/timecode.js"></script>

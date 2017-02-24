@@ -166,3 +166,11 @@ html {
 .metric-container {
     padding: 0px 100px;
 }
+
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+
+input.ng-valid.ng-touched {
+  border: 1px solid green;
+}

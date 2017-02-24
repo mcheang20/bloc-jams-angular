@@ -1,0 +1,25 @@
+<section>
+  <form name="appform" ng-submit="signUp()">
+    <div>
+      <h1>Sign Up</h1>
+      <p ng-show="message">{{ message }}</p>
+    </div>
+
+    <fieldset>
+      <input type="firstname" name="firstname" placeholder="First Name" ng-model="user.firstname" ng-required="true">
+      <p ng-show="appform.email.$invalid && appform.email.$touched"> Please enter a first name</p>
+
+      <input type="lastname" name="lastname" placeholder="Last Name" ng-model="user.lastname" ng-required="true">
+      <p ng-show="appform.email.$invalid && appform.email.$touched"> Please enter a last name</p>
+
+      <input type="email" name="email" placeholder="Email" ng-model="user.email" ng-required="true">
+      <p ng-show="appform.email.$invalid && appform.email.$touched"> Please enter a valid email</p>
+
+      <input type="password" name="password" placeholder="Password" ng-model="user.password" ng-required="true">
+      <p ng-show="appform.password.$invalid && appform.password.$touched"> Password required</p>
+    </fieldset>
+
+    <button type="submit" class="btn" ng-disabled="appform.$invalid">Register</button>
+    <p> or <a href="#/login">Login</a></p>
+  </form>
+</section>
