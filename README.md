@@ -1,4 +1,4 @@
-# BlocJams
+# Gorilla Music
 
 A digital web music player.
 

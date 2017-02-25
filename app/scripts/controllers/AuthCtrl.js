@@ -15,6 +15,6 @@
      }
 
      angular
-         .module('blocJams')
+         .module('gorillaMusic')
          .controller('AuthCtrl', ['$scope', 'Authentication', AuthCtrl]);
  })();

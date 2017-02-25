@@ -64,6 +64,6 @@ var albumMarconi = {
      }
 
      angular
-         .module('blocJams')
+         .module('gorillaMusic')
          .factory('Fixtures', Fixtures);
  })();

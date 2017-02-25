@@ -5,7 +5,7 @@
        this.Fixtures = Fixtures.getAlbum;
        this.name = "Bloc Jams Metrics";
        this.dataArray =  this.Metric.albumSongData;
-         
+
        this.options = {
             chart: {
                 type: 'discreteBarChart',
@@ -32,7 +32,7 @@
                 }
             }
        };
-         
+
 
            this.data = [
                {
@@ -59,14 +59,14 @@
 //                        value: 7
 //                    }
 //                ]
-//                   
+//
                    values: this.dataArray
                }];
-           
+
      }
-    
- 
+
+
      angular
-         .module('blocJams')
+         .module('gorillaMusic')
          .controller('MetricCtrl', ['$rootScope', 'Metric', 'Fixtures', MetricCtrl]);
  })();

@@ -54,6 +54,6 @@
      }
 
      angular
-         .module('blocJams')
+         .module('gorillaMusic')
          .factory('Authentication', ['$rootScope', '$location', '$firebaseObject', '$firebaseAuth', Authentication]);
  })();

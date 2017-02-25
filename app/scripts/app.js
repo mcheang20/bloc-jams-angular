@@ -49,9 +49,9 @@
          controller: '',
          templateUrl: '/templates/success.html'
       });
-    } 
+    }
 
     angular
-         .module('blocJams', ['ui.router', 'nvd3', 'firebase'])
+         .module('gorillaMusic', ['ui.router', 'nvd3', 'firebase'])
          .config(config);
  })();

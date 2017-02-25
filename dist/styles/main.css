@@ -67,15 +67,6 @@ html {
      color: #F78400;
  }
 
-.hero-content {
-     position: relative; /* positioning will be explained in a resource */
-     min-height: 600px;  /* hero content element must be _at least_ 600 pixels */
-     background-image: url(../assets/images/bloc_jams_bg.jpg);
-     background-repeat: no-repeat;
-     background-position: center center;
-     background-size: cover;
- }
-
 .hero-content .hero-title {
      position: absolute;             /* positioning will be explained in a resource */
      top: 40%;                       /* positioning will be explained in a resource */
@@ -173,4 +164,15 @@ input.ng-invalid.ng-touched {
 
 input.ng-valid.ng-touched {
   border: 1px solid green;
+}
+
+.banner-top {
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: -webkit-center;
+  position: absolute;
+  top: 0;
+  padding-top: 20px;
+  font-size: 1.2rem;
 }

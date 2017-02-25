@@ -1,6 +1,6 @@
 <section>
   <form name="appform" novalidate ng-submit="login()">
-    <div>
+    <div class="form-page">
       <h1>Login</h1>
       <p ng-show="message">{{ message }}</p>
     </div>
@@ -14,6 +14,6 @@
     </fieldset>
 
     <button type="submit" class="btn" ng-disabled="appform.$invalid">Login</button>
-    <p> or <a href="#/register">Register</a></p>
+    <p> or <a href="/register">Register</a></p>
   </form>
 </section>

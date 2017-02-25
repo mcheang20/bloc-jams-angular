@@ -6,8 +6,8 @@
       this.songPlayer = SongPlayer;
       this.Metric = Metric;
       }
- 
+
      angular
-         .module('blocJams')
+         .module('gorillaMusic')
          .controller('AlbumCtrl', ['Fixtures','SongPlayer', 'Metric', '$rootScope', AlbumCtrl]);
  })();

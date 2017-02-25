@@ -6,13 +6,13 @@
  * @desc stores album information
  */
          var currentAlbum = Fixtures.getAlbum();
-         
+
 /**
  * @desc Buzz object audio file
  * @type {Object}
  */
          var currentBuzzObject = null;
-         
+
  /**
  * @function setSong
  * @desc Stops currently playing song and loads new audio file as currentBuzzObject
@@ -22,12 +22,12 @@
             currentBuzzObject.play();
             SongPlayer.currentSong.playing = true;
         }
-        
+
          var stopSong = function(song) {
             currentBuzzObject.stop();
             SongPlayer.currentSong.playing = null;
          }
-    
+
          var setSong = function(song) {
              if (currentBuzzObject) {
                  currentBuzzObject.stop();
@@ -38,13 +38,13 @@
                 formats: ['mp3'],
                 preload: true
             });
-             
+
             currentBuzzObject.bind('timeupdate', function() {
                 $rootScope.$apply(function() {
                 SongPlayer.currentTime = currentBuzzObject.getTime();
                 });
             });
-             
+
             currentBuzzObject.bind('volumechange', function() {
                 $rootScope.$apply(function() {
                 SongPlayer.currentVolume = currentBuzzObject.getVolume();
@@ -67,13 +67,13 @@
         * @type {Object}
         */
         SongPlayer.currentSong = null;
-         
+
         /**
          * @desc Current playback time (in seconds) of currently playing song
          * @type {Number}
          */
          SongPlayer.currentTime = null;
-         
+
         /**
          * @desc Current volume of currently playing song
          * @type {Number}
@@ -94,13 +94,13 @@
             if (currentBuzzObject.isPaused()) {
              currentBuzzObject.play();
          }
-       }       
+       }
      };
 /**
  * @function pause
  * @desc Pause current song
  * @param {Object} song
- */         
+ */
       SongPlayer.pause = function(song) {
          song = song || SongPlayer.currentSong;
          currentBuzzObject.pause();
@@ -113,7 +113,7 @@
       SongPlayer.previous = function() {
          var currentSongIndex = getSongIndex(SongPlayer.currentSong);
          currentSongIndex--;
-          
+
          if (currentSongIndex < 0) {
             stopSong;
          } else {
@@ -122,11 +122,11 @@
              playSong(song);
         }
     };
-      
+
      SongPlayer.next = function() {
          var currentSongIndex = getSongIndex(SongPlayer.currentSong);
          currentSongIndex++;
-          
+
          if (currentSongIndex > 5) {
              stopSong(song);
          } else {
@@ -135,7 +135,7 @@
              playSong(song);
         }
     };
-         
+
       /**
      * @function setCurrentTime
      * @desc Set current time (in seconds) of currently playing song
@@ -145,8 +145,8 @@
          if (currentBuzzObject) {
              currentBuzzObject.setTime(time);
          }
-     }; 
-         
+     };
+
      /**
      * @function setCurrentVolume
      * @desc Set current volume of currently playing song
@@ -158,11 +158,11 @@
              SongPlayer.currentVolume = volume;
          }
      };
-         
+
     return SongPlayer;
     }
- 
+
      angular
-         .module('blocJams')
+         .module('gorillaMusic')
          .factory('SongPlayer', ['$rootScope', 'Fixtures', 'Metric', SongPlayer]);
  })();

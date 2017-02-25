@@ -1,6 +1,6 @@
 <section>
   <form name="appform" ng-submit="signUp()">
-    <div>
+    <div class="form-page">
       <h1>Sign Up</h1>
       <p ng-show="message">{{ message }}</p>
     </div>
@@ -20,6 +20,6 @@
     </fieldset>
 
     <button type="submit" class="btn" ng-disabled="appform.$invalid">Register</button>
-    <p> or <a href="#/login">Login</a></p>
+    <p> or <a href="/login">Login</a></p>
   </form>
 </section>
