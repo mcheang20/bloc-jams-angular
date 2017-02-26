@@ -10,6 +10,6 @@
      }
 
      angular
-         .module('blocJams')
+         .module('gorillaMusic')
          .controller('LandingCtrl', LandingCtrl);
  })();

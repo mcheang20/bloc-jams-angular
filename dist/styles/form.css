@@ -10,6 +10,7 @@ form {
 
 fieldset {
   text-align: -webkit-center;
+  border: none;
 }
 
 fieldset input{

@@ -28,6 +28,8 @@
 
  .selling-points {
      position: relative;
+     background-color: #f7f9fa;
+     padding-bottom: 5rem;
  }
 
  .point {
@@ -39,11 +41,12 @@
      -webkit-transform: scaleX(0.9) translateY(3rem);
      -moz-transform: scaleX(0.9) translateY(3rem);
      transform: scaleX(0.9) translateY(3rem);
-
  }
 
  .point .point-title {
      font-size: 1.25rem;
+     text-transform: uppercase;
+     font-weight: 400;
  }
 
  .ion-music-note,
@@ -77,4 +80,28 @@
 .button-top button:hover {
   transform: scale(1.2);
   background-color: #C67B19;
+}
+
+.info {
+  background-image: url(../assets/images/equalizer.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  min-height: 38rem;
+  margin-top: 50px;
+}
+
+.info h1 {
+  position: absolute;
+  margin-top: 28rem;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  text-shadow: 1px 1px 0px rgb(58,23,63);
 }

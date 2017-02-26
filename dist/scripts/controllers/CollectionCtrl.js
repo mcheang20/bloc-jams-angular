@@ -6,6 +6,6 @@
 
 
      angular
-         .module('blocJams')
+         .module('gorillaMusic')
          .controller('CollectionCtrl', ['Fixtures', 'Metric', '$rootScope', CollectionCtrl]);
  })();

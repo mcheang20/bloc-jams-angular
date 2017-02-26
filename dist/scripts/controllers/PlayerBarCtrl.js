@@ -3,8 +3,8 @@
          this.albumData = Fixtures.getAlbum();
          this.songPlayer = SongPlayer;
      }
- 
+
      angular
-         .module('blocJams')
+         .module('gorillaMusic')
          .controller('PlayerBarCtrl', ['Fixtures', 'SongPlayer', PlayerBarCtrl]);
  })();

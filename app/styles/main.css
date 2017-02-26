@@ -10,7 +10,6 @@ html {
  }
 
  body {
-     background-color: rgb(191, 191, 191);
      background-repeat: no-repeat;
      background-attachment: fixed;
      background-position: center center;
@@ -123,7 +122,7 @@ html {
 
 /* Medium and small screens (640px) */
  @media (min-width: 640px) {
-    html { font-size: 112%; }
+    html { font-size: 100%; }
 
       .column {
          float: left;
