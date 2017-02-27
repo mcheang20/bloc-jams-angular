@@ -1,4 +1,4 @@
- <main class="album-view container narrow">
+ <main class="album-view">
      <section class="clearfix">
          <div class="column half">
              <img ng-src="{{ album.albumData.albumArtUrl }}" class="album-cover-art">
@@ -6,7 +6,9 @@
          <div class="album-view-details column half">
              <h2 class="album-view-title">{{ album.albumData.title }}</h2>
              <h3 class="album-view-artist">{{ album.albumData.artist }}</h3>
-             <h5 class="album-view-release-info">{{ album.albumData.publisher }}</h5>
+             <h3 class="album-view-release-info">{{ album.albumData.publisher }}</h3>
+             <h3 class="album-view-release-info">{{ album.albumData.label }}</h3>
+             <h3 class="album-view-release-info">{{ album.albumData.year }}</h3>
          </div>
      </section>
      <table class="album-view-song-list">

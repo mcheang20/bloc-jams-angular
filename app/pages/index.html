@@ -14,21 +14,23 @@
      <link rel="stylesheet" type="text/css" href="/styles/form.css">
      <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.2/nv.d3.min.css"/>
+     <!-- Latest compiled and minified CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>
-    <nav class="navbar">
+    <nav class="nav-top">
          <a ui-sref="landing" class="logo">
-           <img style="height:4rem;" src="assets/images/logo_1.jpg" alt="bloc jams logo">
+           <img style="height:9rem;" src="assets/images/logo_1.jpg" alt="bloc jams logo">
          </a>
          <div ng-show="currentUser" ng-controller="AuthCtrl">
            <p class="banner-top">Welcome {{ currentUser.firstname}}</p>
          </div>
          <div class="links-container">
-             <a ui-sref="collection" class="navbar-link">collection</a>
-             <a ui-sref="metric" class="navbar-link" ng-show="currentUser">metrics</a>
-             <a ui-sref="login" ng-hide="currentUser" class="navbar-link">login</a>
-             <a ui-sref="register" ng-hide="currentUser" class="navbar-link">register</a>
-             <a ui-sref="login" ng-click="logout()" class="navbar-link" ng-show="currentUser" ng-controller="AuthCtrl">logout</a>
+             <a ui-sref="collection" class="nav-top-link">collection</a>
+             <a ui-sref="metric" class="nav-top-link" ng-show="currentUser">metrics</a>
+             <a ui-sref="login" ng-hide="currentUser" class="nav-top-link">login</a>
+             <a ui-sref="register" ng-hide="currentUser" class="nav-top-link">register</a>
+             <a ui-sref="login" ng-click="logout()" class="nav-top-link" ng-show="currentUser" ng-controller="AuthCtrl">logout</a>
          </div>
       </nav>
 
@@ -57,6 +59,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.2/nv.d3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-nvd3/1.0.9/angular-nvd3.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="/scripts/app.js"></script>
     <script src="/scripts/services/Fixtures.js"></script>
     <script src="/scripts/services/SongPlayer.js"></script>

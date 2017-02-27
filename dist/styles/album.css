@@ -2,7 +2,7 @@
      position: relative;
      left: 20%;
      margin-top: 1rem;
-     width: 60%;
+     width: 45%;
  }
 
  .album-view-details {
@@ -14,31 +14,31 @@
 
  .album-view-details .album-view-title {
      font-weight: 300;
-     font-size: 2.2rem;
+     font-size: 3.5rem;
      font-weight: 400;
  }
 
  .album-view-details .album-view-artist {
      font-weight: 300;
-     font-size: 1.6rem;
+     font-size: 2.5rem;
  }
 
  .album-view-details .album-view-release-info {
      font-weight: 300;
-     font-size: 0.9rem;
+     font-size: 2rem;
  }
 
   .album-view-song-list {
      width: 90%;
      margin: 1.5rem auto;
      font-weight: 300;
-     font-size: 0.75em;
+     font-size: 2rem;
      border-collapse: collapse;
  }
 
  .album-view-song-item {
-     height: 3rem;
-     border-bottom: 1px solid rgba(255,255,255,0.5);
+     height: 5.2rem;
+     border-bottom: 1px solid rgba(1,1,1,.1);
  }
 
  .song-item-number {

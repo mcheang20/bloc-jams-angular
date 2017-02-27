@@ -54,7 +54,6 @@ var albumMarconi = {
         Fixtures.getCollection = function(numberOfAlbums) {
             var albums = [];
             for(var i = 0; i < numberOfAlbums; i++) {
-                albums.push(angular.copy(albumPicasso));
                 albums.push(angular.copy(albumTobu));
             }
             return albums;

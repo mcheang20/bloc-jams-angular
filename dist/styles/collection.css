@@ -14,7 +14,7 @@
  }
 
  .collection-album-container .caption p {
-     font-size: 1rem;
+     font-size: 2rem;
      font-weight: 300;
      text-decoration: none;
      color: #2F2D2D;
@@ -23,11 +23,12 @@
  .collection-album-container .caption p a {
      color: #2F2D2D;
      text-decoration: none;
+     font-size: 2rem;
  }
 
  .collection-album-container .caption p a.album-name {
      color: #2F2D2D;
-     font-size: 1.3rem;
+     font-size: 2.7rem;
      font-weight: 400;
  }
 

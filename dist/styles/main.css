@@ -24,20 +24,20 @@ html {
      background-color: rgb(58,23,63); /* sets the background color to an RGB value (see below) */
  }
 
-.navbar {
+.nav-top {
     position: relative;
     padding: 0.5rem;
     background-color: #2F2D2D;
     z-index: 1;
  }
 
- .navbar .logo {
+ .nav-top .logo {
      position: relative; /* positioning will be explained in a resource */
      left: 2rem;
      cursor: pointer;  /* produces the finger-pointer icon when you hover over the logo */
  }
 
- .navbar .links-container {
+ .nav-top .links-container {
      display: table;
      position: absolute;
      top: 0;
@@ -47,22 +47,22 @@ html {
      text-decoration: none;
  }
 
- .links-container .navbar-link {
+ .links-container .nav-top-link {
      display: table-cell;
      position: relative;
      height: 100%;
-     padding-right: 1.5rem;
+     padding-right: 3rem;
      vertical-align: middle;
      color: white;
-     font-size: 0.8rem;
+     font-size: 1.8rem;
      letter-spacing: 0.05rem;
-     font-weight: 400;
+     font-weight: 200;
      text-transform: uppercase;
      text-decoration: none;
      cursor: pointer;
  }
 
- .links-container .navbar-link:hover {
+ .links-container .nav-top-link:hover {
      color: #F78400;
  }
 
