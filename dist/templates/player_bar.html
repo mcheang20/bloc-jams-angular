@@ -2,10 +2,11 @@
      <div class="container">
          <div class="control-group main-controls">
               <a class="previous" ng-click="playerBar.songPlayer.previous()">
-                 <span class="ion-skip-backward"></span>
+                 <span class="glyphicon glyphicon-fast-backward" style="font-size:2.5rem;"></span>
              </a>
              <a class="play-pause">
-                 <span class='ion-play'
+                 <span class='glyphicon glyphicon-play'
+                    style="font-size:2.5rem;"
                     ng-show="!playerBar.songPlayer.currentSong.playing"
                     ng-click="playerBar.songPlayer.play()">
                  </span>
@@ -15,7 +16,7 @@
                 </span>
              </a>
              <a class="next" ng-click="playerBar.songPlayer.next()">
-                 <span class="ion-skip-forward"></span>
+                 <span class="glyphicon glyphicon-fast-forward" style="font-size:2.5rem;"></span>
              </a>
          </div>
          <div class="control-group currently-playing">
@@ -29,7 +30,7 @@
              </div>
          </div>
          <div class="control-group volume">
-             <span class="icon ion-volume-high"></span>
+             <span class="glyphicon glyphicon-volume-up"></span>
              <seek-bar value="{{ playerBar.songPlayer.currentVolume }}" max="100" on-change="playerBar.songPlayer.setCurrentVolume(value)"></seek-bar>
          </div>
      </div>
