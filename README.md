@@ -1,5 +1,5 @@
 # Gorilla Music
-
+![](https://github.com/mcheang20/Travelog/blob/master/app/assets/images/gorilla_mus.png)
 A digital web music player.
 
 ## Configuration
@@ -7,7 +7,7 @@ A digital web music player.
 Start by cloning the repository:
 
 ```
-$ git clone https://github.com/mcheang20/bloc-jams-angular.git
+$ git clone https://github.com/mcheang20/gorilla-music.git
 ```
 The project uses Grunt to run tasks in development. Thoroughly review our [resource on using Grunt](https://www.bloc.io/resources/using-grunt) before using this application. It may also help to review [our resource on NPM and `package.json` files](https://www.bloc.io/resources/npm-and-package-json).
 
