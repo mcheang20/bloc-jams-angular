@@ -1,5 +1,5 @@
 # Gorilla Music
-![](https://github.com/mcheang20/Travelog/blob/master/app/assets/images/gorilla_mus.png)
+![](https://github.com/mcheang20/gorilla-music/blob/master/app/assets/images/gorilla_mus.png)
 A digital web music player.
 
 ## Configuration
